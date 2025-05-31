@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import TableWithElements from './components/TableWithElements';
+import { projects } from './data/projects';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="header">
+        <h1>Aleh Kapusta</h1>
+        <h3>Frontend Developer</h3>
       </header>
+      <main>
+        <h2>Projects</h2>
+
+        <br />
+        <div className="contener">
+          <TableWithElements props={projects} />
+        </div>
+      </main>
+      <footer>
+        <span>© Aleh Kapusta, Poznan 2024</span>
+      </footer>
     </div>
   );
 }
